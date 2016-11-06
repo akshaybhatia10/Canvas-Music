@@ -9,11 +9,15 @@
 			myCircle.strokeColor = 'orange';
 			myCircle.selected = true; -->
 
+			function onKeyDown(event){
+
 			var maxPoint = new Point(view.size.width,view.size.height);
 			var randomPoint = Point.random();
 			var point = maxPoint * randomPoint ;
 			var newCircle = new Path.Circle(point,10);
 			newCicle.fillColor = "orange";
+			circles.push(newCircle);
+				}
 		</script>
 	</head>
 
