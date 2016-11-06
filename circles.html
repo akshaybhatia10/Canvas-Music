@@ -4,15 +4,16 @@
 		<script type="text/javascript" src="paper-full.js"></script>
 		<link rel="stylesheet" type="text/css" href="circles.css">
 		<script type="text/paperscript" canvas="myCanvas">
-			var path = new Path();
-			myPath.strokeColor = 'orange';
-			var start = new Point(100,100);
-			path.moveTo(start);
-			path.lineTo(start + [100,-50]);
 
-			var myCircle = new Path.Circle(new Point(0,0), 50);
+			<!-- var myCircle = new Path.Circle(new Point(0,0), 50);
 			myCircle.strokeColor = 'orange';
-			myCircle.selected = true;
+			myCircle.selected = true; -->
+
+			var maxPoint = new Point(view.size.width,view.size.height);
+			var randomPoint = Point.random();
+			var point = maxPoint * randomPoint ;
+			var newCircle = new Path.Circle(point,10);
+			newCicle.fillColor = "orange";
 		</script>
 	</head>
 
