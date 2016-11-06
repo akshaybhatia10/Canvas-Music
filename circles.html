@@ -8,6 +8,7 @@
 			<!-- var myCircle = new Path.Circle(new Point(0,0), 50);
 			myCircle.strokeColor = 'orange';
 			myCircle.selected = true; -->
+			var circles = [];	
 
 			function onKeyDown(event){
 
@@ -18,6 +19,13 @@
 			newCicle.fillColor = "orange";
 			circles.push(newCircle);
 				}
+
+			function onFrame(event){
+					for(var i=0;i<circles.length;i++){
+						circles[i].fillColor.hue +=1;
+						circles[i].scale(.9);
+					}
+				}	
 		</script>
 	</head>
 
